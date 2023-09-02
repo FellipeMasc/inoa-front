@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-BlackCondensed.eot");
+	src: local("DIN Next LT Pro Black Condensed"), local("DINNextLTPro-BlackCondensed"), url("assets/fonts/DINNextLTPro-BlackCondensed.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-BlackCondensed.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-BlackCondensed.woff") format("woff"), url("assets/fonts/DINNextLTPro-BlackCondensed.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Regular.eot");
+	src: local("DIN Next LT Pro Regular"), local("DINNextLTPro-Regular"), url("assets/fonts/DINNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Regular.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Regular.woff") format("woff"), url("assets/fonts/DINNextLTPro-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Medium.eot");
+	src: local("DIN Next LT Pro Medium"), local("DINNextLTPro-Medium"), url("assets/fonts/DINNextLTPro-Medium.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Medium.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Medium.woff") format("woff"), url("assets/fonts/DINNextLTPro-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-BoldItalic.eot");
+	src: local("DIN Next LT Pro Bold Italic"), local("DINNextLTPro-BoldItalic"), url("assets/fonts/DINNextLTPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-BoldItalic.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-BoldItalic.woff") format("woff"), url("assets/fonts/DINNextLTPro-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-UltraLightCond.eot");
+	src: local("DIN Next LT Pro UltraLight Condensed"), local("DINNextLTPro-UltraLightCond"), url("assets/fonts/DINNextLTPro-UltraLightCond.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-UltraLightCond.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-UltraLightCond.woff") format("woff"), url("assets/fonts/DINNextLTPro-UltraLightCond.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro Condensed";
+	src: url("assets/fonts/DINNextLTPro-BoldCondensed.eot");
+	src: local("DIN Next LT Pro Bold Condensed"), local("DINNextLTPro-BoldCondensed"), url("assets/fonts/DINNextLTPro-BoldCondensed.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-BoldCondensed.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-BoldCondensed.woff") format("woff"), url("assets/fonts/DINNextLTPro-BoldCondensed.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next Rounded LT Pro";
+	src: url("assets/fonts/DINNextRoundedLTPro-Light.eot");
+	src: local("DIN Next Rounded LT Pro Light"), local("DINNextRoundedLTPro-Light"), url("assets/fonts/DINNextRoundedLTPro-Light.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextRoundedLTPro-Light.woff2") format("woff2"), url("assets/fonts/DINNextRoundedLTPro-Light.woff") format("woff"), url("assets/fonts/DINNextRoundedLTPro-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-UltraLightIt.eot");
+	src: local("DIN Next LT Pro UltraLight Italic"), local("DINNextLTPro-UltraLightIt"), url("assets/fonts/DINNextLTPro-UltraLightIt.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-UltraLightIt.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-UltraLightIt.woff") format("woff"), url("assets/fonts/DINNextLTPro-UltraLightIt.ttf") format("truetype");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-UltraLight.eot");
+	src: local("DIN Next LT Pro UltraLight"), local("DINNextLTPro-UltraLight"), url("assets/fonts/DINNextLTPro-UltraLight.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-UltraLight.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-UltraLight.woff") format("woff"), url("assets/fonts/DINNextLTPro-UltraLight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Condensed.eot");
+	src: local("DIN Next LT Pro Condensed"), local("DINNextLTPro-Condensed"), url("assets/fonts/DINNextLTPro-Condensed.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Condensed.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Condensed.woff") format("woff"), url("assets/fonts/DINNextLTPro-Condensed.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Italic.eot");
+	src: local("DIN Next LT Pro Italic"), local("DINNextLTPro-Italic"), url("assets/fonts/DINNextLTPro-Italic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Italic.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Italic.woff") format("woff"), url("assets/fonts/DINNextLTPro-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "DIN Next Rounded LT Pro";
+	src: url("assets/fonts/DINNextRoundedLTPro-Medium.eot");
+	src: local("DIN Next Rounded LT Pro Medium"), local("DINNextRoundedLTPro-Medium"), url("assets/fonts/DINNextRoundedLTPro-Medium.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextRoundedLTPro-Medium.woff2") format("woff2"), url("assets/fonts/DINNextRoundedLTPro-Medium.woff") format("woff"), url("assets/fonts/DINNextRoundedLTPro-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Heavy.eot");
+	src: local("DIN Next LT Pro Heavy"), local("DINNextLTPro-Heavy"), url("assets/fonts/DINNextLTPro-Heavy.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Heavy.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Heavy.woff") format("woff"), url("assets/fonts/DINNextLTPro-Heavy.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-HeavyItalic.eot");
+	src: local("DIN Next LT Pro Heavy Italic"), local("DINNextLTPro-HeavyItalic"), url("assets/fonts/DINNextLTPro-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-HeavyItalic.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-HeavyItalic.woff") format("woff"), url("assets/fonts/DINNextLTPro-HeavyItalic.ttf") format("truetype");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Bold.eot");
+	src: local("DIN Next LT Pro Bold"), local("DINNextLTPro-Bold"), url("assets/fonts/DINNextLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Bold.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Bold.woff") format("woff"), url("assets/fonts/DINNextLTPro-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next Rounded LT Pro";
+	src: url("assets/fonts/DINNextRoundedLTPro-Regular.eot");
+	src: local("DIN Next Rounded LT Pro Regular"), local("DINNextRoundedLTPro-Regular"), url("assets/fonts/DINNextRoundedLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextRoundedLTPro-Regular.woff2") format("woff2"), url("assets/fonts/DINNextRoundedLTPro-Regular.woff") format("woff"), url("assets/fonts/DINNextRoundedLTPro-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Light.eot");
+	src: local("DIN Next LT Pro Light"), local("DINNextLTPro-Light"), url("assets/fonts/DINNextLTPro-Light.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Light.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Light.woff") format("woff"), url("assets/fonts/DINNextLTPro-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next Rounded LT Pro";
+	src: url("assets/fonts/DINNextRoundedLTPro-Bold.eot");
+	src: local("DIN Next Rounded LT Pro Bold"), local("DINNextRoundedLTPro-Bold"), url("assets/fonts/DINNextRoundedLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextRoundedLTPro-Bold.woff2") format("woff2"), url("assets/fonts/DINNextRoundedLTPro-Bold.woff") format("woff"), url("assets/fonts/DINNextRoundedLTPro-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro Medium Cond";
+	src: url("assets/fonts/DINNextLTPro-HeavyCondensed.eot");
+	src: local("DIN Next LT Pro Heavy Condensed"), local("DINNextLTPro-HeavyCondensed"), url("assets/fonts/DINNextLTPro-HeavyCondensed.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-HeavyCondensed.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-HeavyCondensed.woff") format("woff"), url("assets/fonts/DINNextLTPro-HeavyCondensed.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-LightItalic.eot");
+	src: local("DIN Next LT Pro Light Italic"), local("DINNextLTPro-LightItalic"), url("assets/fonts/DINNextLTPro-LightItalic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-LightItalic.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-LightItalic.woff") format("woff"), url("assets/fonts/DINNextLTPro-LightItalic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-LightCondensed.eot");
+	src: local("DIN Next LT Pro Light Condensed"), local("DINNextLTPro-LightCondensed"), url("assets/fonts/DINNextLTPro-LightCondensed.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-LightCondensed.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-LightCondensed.woff") format("woff"), url("assets/fonts/DINNextLTPro-LightCondensed.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-MediumItalic.eot");
+	src: local("DIN Next LT Pro Medium Italic"), local("DINNextLTPro-MediumItalic"), url("assets/fonts/DINNextLTPro-MediumItalic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-MediumItalic.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-MediumItalic.woff") format("woff"), url("assets/fonts/DINNextLTPro-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-Black.eot");
+	src: local("DIN Next LT Pro Black"), local("DINNextLTPro-Black"), url("assets/fonts/DINNextLTPro-Black.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-Black.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-Black.woff") format("woff"), url("assets/fonts/DINNextLTPro-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-MediumCond.eot");
+	src: local("DIN Next LT Pro Medium Condensed"), local("DINNextLTPro-MediumCond"), url("assets/fonts/DINNextLTPro-MediumCond.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-MediumCond.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-MediumCond.woff") format("woff"), url("assets/fonts/DINNextLTPro-MediumCond.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "DIN Next LT Pro";
+	src: url("assets/fonts/DINNextLTPro-BlackItalic.eot");
+	src: local("DIN Next LT Pro Black Italic"), local("DINNextLTPro-BlackItalic"), url("assets/fonts/DINNextLTPro-BlackItalic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextLTPro-BlackItalic.woff2") format("woff2"), url("assets/fonts/DINNextLTPro-BlackItalic.woff") format("woff"), url("assets/fonts/DINNextLTPro-BlackItalic.ttf") format("truetype");
+	font-weight: 900;
+	font-style: italic;
+}
+
+.App {
+	font-family: 'DIN Next Rounded LT Pro';
+	font-size: large;
+	color: #4c4c4c;
+
+	width: 100%;
+	min-height: 100vh;
+
+	text-align: center;
+	background-color: #242424;
+
+	// flex-direction: row;
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+
+//fonts size
+.f8 {
+	font-size: 8px;
+}
+
+.f10 {
+	font-size: 10px;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f20 {
+	font-size: 20px;
+}
+
+.f24 {
+	font-size: 24px;
+}
+
+.f32 {
+	font-size: 32px;
+}
+
+.f40 {
+	font-size: 40px;
+}
+
+.f48 {
+	font-size: 48px;
+}
+
+
+// fonts weight
+.fw-500 {
+	font-weight: 500;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+
+.blue {
+	color: #009dcc;
+}
+
+
+//lines
+.line-vertical {
+	width: 1px;
+	height: 70px;
+	background-color: #c8c8c8;
+}
+
+.big-line {
+	height: 2px;
+	width: 100%;
+}
+
+.line {
+	height: 1px;
+	width: 100%;
+	background-color: #c4c4c4;
+}
+
+.line-title {
+	position: relative;
+	font-size: 12px;
+	font-weight: 500;
+	text-align: center;
+	color: #afafaf;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		border-radius: 12px;
+		display: block;
+		height: 2px;
+		width: 38%;
+		background-color: #c4c4c4;
+	}
+
+	&::after {
+		right: 0;
+		margin-left: 8px;
+	}
+
+	&::before {
+		left: 0;
+		margin-right: 8px;
+	}
+}
+
+//BUT
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 380px;
+	height: 60px;
+
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+	box-shadow: inset 0px -4px 0px rgba(51, 51, 51, 0.25);
+}
+
+.btn-blue {
+	background-color: #009dcc !important;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.topbar{
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	span{
+		margin-right: 10px;
+	}
+	button{
+		margin-top: 2px;
+	}
+}
+
+

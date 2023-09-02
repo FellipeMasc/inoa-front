@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "DIN Next Rounded LT Pro";
+	src: url("assets/fonts/DINNextRoundedLTPro-Bold.eot");
+	src: local("DIN Next Rounded LT Pro Bold"), local("DINNextRoundedLTPro-Bold"), url("assets/fonts/DINNextRoundedLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/DINNextRoundedLTPro-Bold.woff2") format("woff2"), url("assets/fonts/DINNextRoundedLTPro-Bold.woff") format("woff"), url("assets/fonts/DINNextRoundedLTPro-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+.login-page {
+
+	font-family: "DIN Next Rounded LT Pro";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.content-init {
+		padding-top: 140px;
+		text-align: center;
+	}
+
+	.input-box {
+		//position: relative;
+		display: flex;
+		width: 100%;
+
+		img {
+			position: absolute;
+			left: 13px;
+			top: 30%;
+		}
+
+		.form-login {
+			font-size: 16px;
+			font-weight: 400;
+			text-align: center;
+			color: #000000;
+			height: 50px;
+			background-color: #fafafa;
+			border: 1px solid #afafaf;
+			border-radius: 8px;
+			background-repeat: no-repeat;
+			width: 100%;
+			margin-bottom: 1rem;
+	
+			&::placeholder {
+				font-size: 16px;
+				font-weight: 400;
+				color: #afafaf;
+			}
+		}
+
+	}
+
+
+	.esqueci-senha {
+		&:hover {
+			transform: scale(1);
+			color: #009dcc;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+
+	.btn-form{
+		margin-top: 1rem;
+		color: #000000;
+	}
+
+}

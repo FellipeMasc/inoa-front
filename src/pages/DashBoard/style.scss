@@ -1,0 +1,22 @@
+h1 {
+	text-align: center;
+}
+
+.dashboard {
+	margin-top: 70px;
+	font-family: "DIN Next Rounded LT Pro";
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	.graf-field{
+		background-color: #FFFF;
+		.header{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.a{
+				margin-right: 10px;
+			}
+		}
+	}
+}
