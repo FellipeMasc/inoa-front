@@ -1,7 +1,5 @@
 import Axios from "axios";
 import { useQuery, useMutation, useQueryClient, UseQueryOptions, QueryKey } from '@tanstack/react-query'
-import { useEffect, useState } from "react";
-import { ZodType, z } from "zod";
 
 const defaults_urls: { [key: string]: string } = {
     local: 'http://localhost:3000/',
@@ -47,37 +45,9 @@ function useGet<T = any>(url: string, params = {}, additional_params?: UseQueryO
     };
 }
 
-function getSchema<T extends ZodType>(url: string, params = {}, schema?: T) {
-    return async () => Axios.get(url, { params: params }).then(res => res.data).then(data => schema?.parse(data) ?? data)
-}
-
-export function useGetSchema<T extends ZodType>(
-    url: string, schema?: T, params = {},
-    additional_params?: UseQueryOptions<z.infer<T>, unknown, z.infer<T>, QueryKey>,
-) {
-    let queryKey = [url]
-    queryKey.push(JSON.stringify(params))
-    return {
-        ...useQuery<z.infer<T>>(queryKey, getSchema(url, params, schema), {
-            cacheTime: 7 * 24 * hour,
-            staleTime: 7 * 24 * hour,
-            refetchInterval: 24 * hour,
-            refetchOnMount: false,
-            refetchOnReconnect: false,
-            refetchOnWindowFocus: false,
-            retry: false,
-            useErrorBoundary: (e: any) => e.response?.status >= 500 || (e instanceof z.ZodError),
-            ...additional_params ?? {}
-        }),
-        queryKey
-    };
-}
 
 function post<T>(url: string) {
     return async (params: T) => Axios.post(url, params).then(res => res.data).catch(error => {
-        // error.response?.status >= 500 && Bugsnag.notify(error, e => {
-        //     e.addMetadata('request', { params, error });
-        // })
         throw error;
     });
 }
@@ -89,9 +59,6 @@ function postFull<T>(url: string) {
         }
     }).then(res=>{console.log(res)
     return res}).catch(error => {
-        // error.response?.status >= 500 && Bugsnag.notify(error, e => {
-        //     e.addMetadata('request', { params, error })
-        // })
         throw error;
     });
 }
@@ -157,16 +124,5 @@ const prefetchQuery = async (url: string, client: any) => {
     });
 }
 
-export function useDummyRequest() {
-    const [isLoading, setIsLoading] = useState(true)
-
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 2000);
-    }, [])
-
-    return isLoading
-}
 
 export { useGet, usePost, useClient, get, prefetchQuery, useDelete, usePatch };

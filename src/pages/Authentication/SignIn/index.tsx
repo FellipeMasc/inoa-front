@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from "react"
 import "./styles.scss"
 
 import Axios from "axios"
-import { logout, useClient, usePost } from "utils/requests"
+import { logout, useClient, usePatch, usePost } from "utils/requests"
 
 import jwt_decode from "jwt-decode"
 import { Navigate, useNavigate } from "react-router-dom"
@@ -47,7 +47,7 @@ const Header: FC<{}> = () => {
     return (
         <div className="content-init">
             <h1 className="blue fw-700 fw-bold text-start lh-1 pb-0">DashBoard Ativos</h1>
-            <p className="grayaf f14 lh-1 text-start pt-0 mb-4">
+            <p className="grayaf f24 lh-1 text-start pt-0 mb-4">
                 Coloque o email que você cadastrou
             </p>
         </div>
@@ -56,6 +56,8 @@ const Header: FC<{}> = () => {
 
 const InputFields: FC<{ setAuthenticated: Function }> = ({ setAuthenticated }) => {
     const mutation = usePost("login", {}, true)
+    
+    
 
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
@@ -87,6 +89,7 @@ const InputFields: FC<{ setAuthenticated: Function }> = ({ setAuthenticated }) =
                                 alert("Login mal sucedido")
                                 return
                             }
+                            
 
                             Axios.defaults.headers.common = {
                                 Accept: "application/json",

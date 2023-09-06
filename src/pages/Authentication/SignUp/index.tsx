@@ -3,7 +3,7 @@ import { z } from "zod"
 import { zodResolver } from "../../../../node_modules/@hookform/resolvers/zod"
 import "./styles.scss"
 import { FC } from "react"
-import { usePost } from "utils/requests"
+import { usePatch, usePost } from "utils/requests"
 import { ativos } from "utils/ativos"
 import { useNavigate } from "react-router-dom"
 
@@ -36,17 +36,11 @@ const cadastroSchema = z.object({
                 preco_venda: z
                     .string()
                     .nonempty("Coloque o preço de venda")
-                    .regex(
-                        /\d+(\.\d+)?/,
-                        "precisa estar no formato dígito.dígito"
-                    ),
+                    .regex(/\d+(\.\d+)?/, "precisa estar no formato dígito.dígito"),
                 preco_compra: z
                     .string()
                     .nonempty("Coloque o preço de compra")
-                    .regex(
-                        /\d+(\.\d+)?/,
-                        "precisa estar no formato dígito.dígito"
-                    ),
+                    .regex(/\d+(\.\d+)?/, "precisa estar no formato dígito.dígito"),
             })
         )
         .min(1, "selecione pelo menos 1 ativo")
@@ -71,9 +65,7 @@ const Header: FC<{}> = () => {
     return (
         <div className="content-init">
             <h1 className="blue fw-700 fw-bold text-start lh-1 pb-0">Cadastre seu Email</h1>
-            <p className="grayaf f14 lh-1 text-start pt-0 mb-4">
-                Adicione seu email, intervalo de chequagem e ativos para serem monitorados.
-            </p>
+            <p className="grayaf f24 lh-1 text-start pt-0 mb-4">Adicione seu email, intervalo de chequagem e ativos para serem monitorados.</p>
         </div>
     )
 }
@@ -93,6 +85,7 @@ const InputFields: FC = () => {
     })
 
     const mutation = usePost("/signup")
+    const mutation_schedule = usePost("enviar_ativos/schedule", {}, true)
     const navigate = useNavigate()
 
     return (
@@ -110,9 +103,23 @@ const InputFields: FC = () => {
                         },
                     },
                     {
-                        onSuccess: (data) => {
+                        onSuccess: (resp) => {
                             alert("Cadastro feito com sucesso, você receberá atualizações no email, faça login para ver os seus ativos")
                             navigate("../")
+
+                            mutation_schedule.mutate(
+                                {
+                                    comando: "start",
+                                    interval: data.intervalo_checagem,
+                                    email: data.email,
+                                    ativos: JSON.stringify(data.ativos),
+                                },
+                                {
+                                    onError: (err) => {
+                                        console.log(err)
+                                    },
+                                }
+                            )
                         },
                     }
                 )
@@ -120,23 +127,11 @@ const InputFields: FC = () => {
             noValidate
         >
             <div className="input-box">
-                <input
-                    type="email"
-                    {...register("email")}
-                    className="form-login"
-                    placeholder="Email"
-                />
+                <input type="email" {...register("email")} className="form-login" placeholder="Email" />
                 {errors.email && <span className="error-form">{errors.email.message}</span>}
 
-                <input
-                    className="form-login"
-                    placeholder="Intervalo em minutos"
-                    type="number"
-                    {...register("intervalo_checagem")}
-                />
-                {errors.intervalo_checagem && (
-                    <span className="error-form">{errors.intervalo_checagem.message}</span>
-                )}
+                <input className="form-login" placeholder="Intervalo em minutos" type="number" {...register("intervalo_checagem")} />
+                {errors.intervalo_checagem && <span className="error-form">{errors.intervalo_checagem.message}</span>}
 
                 <button
                     type="button"
@@ -154,44 +149,21 @@ const InputFields: FC = () => {
                         <div key={item.id} className="ativos-list">
                             <div className="inputs">
                                 <div className="input-group">
-                                    <input
-                                        className="input-array"
-                                        type="text"
-                                        {...register(`ativos.${index}.nome_ativo`)}
-                                        placeholder="Nome do Ativo"
-                                    />
+                                    <input className="input-array" type="text" {...register(`ativos.${index}.nome_ativo`)} placeholder="Nome do Ativo" />
 
-                                    {errors?.ativos?.[index]?.nome_ativo && (
-                                        <span>{errors?.ativos?.[index]?.nome_ativo?.message}</span>
-                                    )}
+                                    {errors?.ativos?.[index]?.nome_ativo && <span>{errors?.ativos?.[index]?.nome_ativo?.message}</span>}
                                 </div>
 
                                 <div className="input-group">
-                                    <input
-                                        className="input-array"
-                                        type="text"
-                                        {...register(`ativos.${index}.preco_venda`)}
-                                        placeholder="preço de venda"
-                                    />
+                                    <input className="input-array" type="text" {...register(`ativos.${index}.preco_venda`)} placeholder="preço de venda" />
 
-                                    {errors?.ativos?.[index]?.preco_venda && (
-                                        <span>{errors?.ativos?.[index]?.preco_venda?.message}</span>
-                                    )}
+                                    {errors?.ativos?.[index]?.preco_venda && <span>{errors?.ativos?.[index]?.preco_venda?.message}</span>}
                                 </div>
 
                                 <div className="input-group">
-                                    <input
-                                        className="input-array"
-                                        type="text"
-                                        {...register(`ativos.${index}.preco_compra`)}
-                                        placeholder="preço de compra"
-                                    />
+                                    <input className="input-array" type="text" {...register(`ativos.${index}.preco_compra`)} placeholder="preço de compra" />
 
-                                    {errors?.ativos?.[index]?.preco_compra && (
-                                        <span>
-                                            {errors?.ativos?.[index]?.preco_compra?.message}
-                                        </span>
-                                    )}
+                                    {errors?.ativos?.[index]?.preco_compra && <span>{errors?.ativos?.[index]?.preco_compra?.message}</span>}
                                 </div>
                             </div>
 
